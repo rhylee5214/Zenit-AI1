@@ -1,0 +1,70 @@
+{
+  "models": [
+    {
+      "status": "experimental",
+      "created": "2026-11-06T22:23:59+00:00",
+      "evals": [
+        {
+          "file": "zenit-0.1-nano__20261106T222428.json",
+          "suite_hash": "2ca9aa688373",
+          "created": "2026-11-06T22:24:28+00:00",
+          "summary": {
+            "general_knowledge": 0.1667,
+            "math": 0.4667,
+            "coding": 0.0,
+            "reasoning": 0.0,
+            "instruction_following": 0.0,
+            "conversation": 0.0,
+            "hallucination": 0.25,
+            "hallucination_rate": 0.75,
+            "first_token_ms": 4.1,
+            "tokens_per_sec": 533.5
+          }
+        }
+      ],
+      "id": "zenit-0.1-nano",
+      "name": "ZENIT",
+      "version": "0.1-nano",
+      "stage": "pretrain",
+      "engine": "numpy",
+      "path": "models/zenit-0.1-nano",
+      "parameters": 857216,
+      "run_id": "zenit-0.1-nano-20261106-220825",
+      "metrics": {
+        "final_train_loss": 0.29359,
+        "best_val_loss": 0.38516,
+        "steps": 1800
+      }
+    }
+  ],
+  "roadmap": [
+    {
+      "version": "0.1",
+      "goal": "Pipeline proof: tiny native ZENIT trained from scratch on the CC0 seed corpus."
+    },
+    {
+      "version": "1.0",
+      "goal": "Initial experimental model: native ZENIT pretrained on licensed open text on a GPU."
+    },
+    {
+      "version": "2.0",
+      "goal": "Improved instruction following: SFT (LoRA/QLoRA) on an open-weight foundation model."
+    },
+    {
+      "version": "3.0",
+      "goal": "Improved conversation: multi-turn SFT data, persona tuning, memory-aware prompts."
+    },
+    {
+      "version": "4.0",
+      "goal": "Better coding and reasoning: code and math SFT, preference optimisation (DPO)."
+    },
+    {
+      "version": "5.0",
+      "goal": "Advanced model: larger base, curated mixture, retrieval-aware training, wider evals."
+    },
+    {
+      "version": "5.5",
+      "goal": "Major refinement: accuracy, hallucination control, memory and instruction following."
+    }
+  ]
+}

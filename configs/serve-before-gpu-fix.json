@@ -1,0 +1,46 @@
+﻿{
+    "default_model":  "zenit-qwen3-4b",
+    "models":  [
+                   {
+                       "id":  "zenit-qwen3-4b",
+                       "engine":  "hf",
+                       "path":  "models/qwen3-4b-instruct-2507-4bit",
+                       "load_in_4bit":  true,
+                       "context_window":  1000,
+                       "supports_tools":  true,
+                       "card":  {
+                                    "version":  "2.0-qwen3-4b",
+                                    "base_model":  "Qwen/Qwen3-4B-Instruct-2507 (Apache-2.0)",
+                                    "license":  "Apache-2.0",
+                                    "fine_tuned":  false
+                                },
+                       "generation":  {
+                                          "temperature":  0.7,
+                                          "top_p":  0.8,
+                                          "top_k":  20,
+                                          "repetition_penalty":  1.05
+                                      },
+                       "note":  "Pre-quantized 4-bit (nf4) copy of models/qwen3-4b-instruct-2507; the quantization config is stored in its config.json.",
+                       "name":  "Zenit Opax 5.5"
+                   },
+                   {
+                       "id":  "zenit-0.1-nano",
+                       "engine":  "native",
+                       "path":  "models/zenit-0.1-nano",
+                       "backend":  "auto"
+                   },
+                   {
+                       "id":  "zenit-2.0-sft",
+                       "engine":  "hf",
+                       "path":  "Qwen/Qwen3-4B-Base",
+                       "adapter":  "models/zenit-2.0-sft/adapter",
+                       "load_in_4bit":  true,
+                       "chat_template_kwargs":  {
+                                                    "enable_thinking":  false
+                                                },
+                       "context_window":  8192,
+                       "enabled":  false,
+                       "note":  "Set enabled to true after running python -m zenit.finetune.sft"
+                   }
+               ]
+}

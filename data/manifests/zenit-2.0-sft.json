@@ -1,0 +1,14 @@
+{
+  "name": "zenit-2.0-sft",
+  "notes": "Open instruction data for ZENIT 2.0. Read each dataset card, confirm the license fits your use, then set permission to true. The loader refuses any source left at false.",
+  "sources": [
+    {"name": "zenit-seed-chat", "path": "data/raw/zenit_seed", "kind": "chat_jsonl",
+     "license": "CC0-1.0", "origin": "original, written for the ZENIT project", "permission": true},
+    {"name": "smoltalk", "path": "", "kind": "chat_jsonl", "hf_dataset": "HuggingFaceTB/smoltalk", "hf_config": "all",
+     "hf_split": "train", "license": "Apache-2.0 (verify on the dataset card)",
+     "origin": "Hugging Face, synthetic instruction data", "permission": false},
+    {"name": "tulu-3-sft-mixture", "path": "", "kind": "chat_jsonl", "hf_dataset": "allenai/tulu-3-sft-mixture",
+     "hf_split": "train", "license": "ODC-BY-1.0, with per-subset terms (verify on the dataset card)",
+     "origin": "Allen Institute for AI", "permission": false}
+  ]
+}

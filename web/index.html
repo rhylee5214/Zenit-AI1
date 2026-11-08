@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZENIT</title>
+<link rel="icon" href="/static/zenit-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<div class="app" id="app">
+  <aside class="sidebar" id="sidebar" aria-label="Conversations">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 24 A12 12 0 0 1 28 24" fill="none" stroke="url(#zg)" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="12" r="2.6" fill="url(#zg)"/><defs><linearGradient id="zg" x1="0" x2="1"><stop offset="0" stop-color="var(--blue)"/><stop offset="1" stop-color="var(--violet)"/></linearGradient></defs></svg>
+      <span class="wordmark">ZENIT</span>
+      <button class="icon-btn only-mobile" id="closeSidebar" aria-label="Close sidebar">✕</button>
+    </div>
+    <button class="new-chat" id="newChat"><span aria-hidden="true">＋</span> New chat</button>
+    <label class="search">
+      <span class="sr-only">Search chats</span>
+      <input id="searchChats" type="search" placeholder="Search chats" autocomplete="off">
+    </label>
+    <nav class="history" id="history"></nav>
+    <div class="account" id="account" hidden></div>
+    <div class="side-foot">
+      <button class="side-link" data-panel="memory">Memory</button>
+      <button class="side-link" data-panel="documents">Documents</button>
+      <a class="side-link" href="/dashboard">Training</a>
+      <button class="side-link" data-panel="settings">Settings</button>
+      <button class="side-link mobile-only" data-panel="model">Model info</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn only-mobile" id="openSidebar" aria-label="Open sidebar">☰</button>
+      <div class="model-picker">
+        <label class="sr-only" for="modelSelect">Model</label>
+        <select id="modelSelect"></select>
+        <button class="chip-btn" data-panel="model" id="modelInfoBtn">Model info</button>
+      </div>
+      <div class="top-actions">
+        <label class="sr-only" for="profileSelect">Response style</label>
+        <select id="profileSelect" title="Response style"></select>
+        <button class="icon-btn" id="themeToggle" aria-label="Switch theme" title="Switch theme"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+      </div>
+    </header>
+
+    <section class="thread" id="thread" aria-live="polite">
+      <div class="empty" id="empty">
+        <svg class="zenith" viewBox="0 0 600 170" aria-hidden="true">
+          <defs><linearGradient id="arcg" x1="0" x2="1"><stop offset="0" stop-color="var(--blue)" stop-opacity=".15"/><stop offset=".5" stop-color="var(--violet)"/><stop offset="1" stop-color="var(--blue)" stop-opacity=".15"/></linearGradient></defs>
+          <path id="arcPath" d="M30 165 A320.3 320.3 0 0 1 570 165" fill="none" stroke="url(#arcg)" stroke-width="1.5"/>
+          <circle cx="300" cy="17" r="6" class="zenith-dot"/>
+          <circle cx="300" cy="17" r="16" class="zenith-halo"/>
+        </svg>
+        <h1>Start with a question, a file or some code.</h1>
+        <p class="empty-note" id="emptyNote"></p>
+        <div class="suggestions" id="suggestions"></div>
+      </div>
+      <div class="messages" id="messages"></div>
+    </section>
+
+    <footer class="composer-wrap">
+      <div class="rbx-bar" id="rbxBar" hidden>
+        <span class="rbx-pill" id="rbxPill" role="status"><span class="dot" aria-hidden="true"></span><span class="label">Checking Studio</span></span>
+        <label class="sr-only" for="rbxStudio">Roblox Studio window</label>
+        <select id="rbxStudio" hidden></select>
+      </div>
+      <div class="attachments" id="attachments"></div>
+      <form class="composer" id="composer">
+        <input type="file" id="fileInput" multiple hidden>
+        <button type="button" class="icon-btn attach" id="attachBtn" aria-label="Attach files" title="Attach files">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 11.5l-8.6 8.6a5.5 5.5 0 01-7.8-7.8l8.6-8.6a3.7 3.7 0 015.2 5.2l-8.6 8.6a1.8 1.8 0 01-2.6-2.6l7.9-7.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" class="icon-btn rbx-toggle" id="rbxToggle" aria-pressed="false" aria-label="Roblox build mode" title="Roblox build mode">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </button>
+        <label class="sr-only" for="input">Message ZENIT</label>
+        <textarea id="input" rows="1" placeholder="Message ZENIT" autocomplete="off"></textarea>
+        <button type="submit" class="send" id="sendBtn" aria-label="Send">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="stop" id="stopBtn" aria-label="Stop generating" hidden>
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/></svg>
+        </button>
+      </form>
+      <p class="fineprint" id="fineprint">ZENIT runs on its own weights on this machine. Check important answers.</p>
+    </footer>
+  </main>
+
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-labelledby="drawerTitle">
+    <div class="drawer-head">
+      <h2 id="drawerTitle"></h2>
+      <button class="icon-btn" id="closeDrawer" aria-label="Close panel">✕</button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+</div>
+
+<dialog id="connectDialog" class="dialog">
+  <form method="dialog" id="connectForm">
+    <h2>Connect to your ZENIT server</h2>
+    <p>Paste an API key. Create one with <code>python -m zenit.api keys create --admin</code>, or start the server with <code>--local</code> to skip keys on this PC.</p>
+    <label for="keyInput">API key</label>
+    <input id="keyInput" type="password" placeholder="zk-..." autocomplete="off" required>
+    <p class="form-error" id="connectError" role="alert"></p>
+    <div class="dialog-actions"><button class="btn primary" type="submit">Connect</button></div>
+  </form>
+</dialog>
+
+<div class="signin" id="signin" hidden>
+  <div class="signin-card" role="dialog" aria-modal="true" aria-labelledby="signinTitle">
+    <svg class="signin-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 24 A12 12 0 0 1 28 24" fill="none" stroke="url(#sg)" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="12" r="2.6" fill="url(#sg)"/><defs><linearGradient id="sg" x1="0" x2="1"><stop offset="0" stop-color="var(--blue)"/><stop offset="1" stop-color="var(--violet)"/></linearGradient></defs></svg>
+    <span class="wordmark">ZENIT</span>
+    <h2 id="signinTitle">Sign in so ZENIT knows who you are</h2>
+    <p class="signin-note">ZENIT uses your Google name to talk with you, and keeps your chats, memory and files separate from anyone else on this PC.</p>
+    <div class="gsi-slot" id="gsiButton"><span class="hint">Loading Google sign-in</span></div>
+    <p class="form-error" id="signinError" role="alert"></p>
+    <p class="signin-hint" id="signinHost" hidden></p>
+    <button type="button" class="link-btn" id="signinSkip" hidden>Continue without signing in</button>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" role="status"></div>
+<script src="/static/markdown.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

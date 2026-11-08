@@ -1,0 +1,23 @@
+{
+  "run_name": "zenit-1.0-small",
+  "version": "1.0-small",
+  "stage": "pretrain",
+  "backend": "torch",
+  "model": {"preset": "small"},
+  "tokenizer": "models/tokenizers/zenit-bpe-16k.json",
+  "data_dir": "data/processed/zenit-1.0",
+  "mode": "pretrain",
+  "batch_size": 16,
+  "seq_len": 1024,
+  "grad_accum": 8,
+  "max_steps": 20000,
+  "lr": 0.0006,
+  "min_lr": 0.00006,
+  "warmup_steps": 1000,
+  "eval_interval": 500,
+  "eval_batches": 20,
+  "ckpt_interval": 1000,
+  "precision": "bf16",
+  "compile": true,
+  "notes": "First native GPU model. Needs a licensed open pretraining corpus in data/processed/zenit-1.0 (see docs/DATA.md)."
+}

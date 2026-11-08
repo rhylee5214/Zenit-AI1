@@ -1,0 +1,10 @@
+{"id": "if-01", "messages": [{"role": "user", "content": "Reply with only the word yes."}], "scorer": {"type": "constraints", "checks": [{"exact": "yes"}]}, "max_tokens": 16}
+{"id": "if-02", "messages": [{"role": "user", "content": "Write the word galaxy in capital letters."}], "scorer": {"type": "constraints", "checks": [{"contains_cs": "GALAXY"}]}, "max_tokens": 16}
+{"id": "if-03", "messages": [{"role": "user", "content": "List exactly three fruits as a bulleted list and nothing else."}], "scorer": {"type": "constraints", "checks": [{"bullets": 3}]}, "max_tokens": 48}
+{"id": "if-04", "messages": [{"role": "user", "content": "Answer in all lowercase letters: what is the capital of France?"}], "scorer": {"type": "constraints", "checks": [{"lowercase": true}, {"contains": "paris"}]}, "max_tokens": 32}
+{"id": "if-05", "messages": [{"role": "user", "content": "Write one sentence about the sea in fewer than 12 words."}], "scorer": {"type": "constraints", "checks": [{"max_words": 11}, {"min_words": 3}]}, "max_tokens": 40}
+{"id": "if-06", "messages": [{"role": "user", "content": "Output only a JSON object with keys name and age for a person called Mo who is 30."}], "scorer": {"type": "constraints", "checks": [{"json_keys": ["name", "age"]}]}, "max_tokens": 48}
+{"id": "if-07", "messages": [{"role": "user", "content": "Count from 3 to 7, separated by commas."}], "scorer": {"type": "constraints", "checks": [{"regex": "^\\s*3,\\s*4,\\s*5,\\s*6,\\s*7\\.?\\s*$"}]}, "max_tokens": 24}
+{"id": "if-08", "messages": [{"role": "user", "content": "Start your answer with the word Sure. What is 2 + 2?"}], "scorer": {"type": "constraints", "checks": [{"starts_with": "Sure"}, {"contains": "4"}]}, "max_tokens": 32}
+{"id": "if-09", "messages": [{"role": "user", "content": "Name a colour without using the letter e anywhere in your reply."}], "scorer": {"type": "constraints", "checks": [{"not_contains_ci": "e"}, {"min_words": 1}]}, "max_tokens": 16}
+{"id": "if-10", "messages": [{"role": "user", "content": "Repeat after me: the quick brown fox"}], "scorer": {"type": "constraints", "checks": [{"contains": "the quick brown fox"}]}, "max_tokens": 24}

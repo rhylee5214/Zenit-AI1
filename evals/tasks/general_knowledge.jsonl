@@ -1,0 +1,12 @@
+{"id": "gk-01", "messages": [{"role": "user", "content": "What is the capital of Sweden?"}], "scorer": {"type": "contains_any", "answers": ["Stockholm"]}, "max_tokens": 96}
+{"id": "gk-02", "messages": [{"role": "user", "content": "What is the capital of Poland?"}], "scorer": {"type": "contains_any", "answers": ["Warsaw"]}, "max_tokens": 96}
+{"id": "gk-03", "messages": [{"role": "user", "content": "What is the capital of South Korea?"}], "scorer": {"type": "contains_any", "answers": ["Seoul"]}, "max_tokens": 96}
+{"id": "gk-04", "messages": [{"role": "user", "content": "What is the capital of Peru?"}], "scorer": {"type": "contains_any", "answers": ["Lima"]}, "max_tokens": 96}
+{"id": "gk-05", "messages": [{"role": "user", "content": "Which planet is closest to the Sun?"}], "scorer": {"type": "contains_any", "answers": ["Mercury"]}, "max_tokens": 96}
+{"id": "gk-06", "messages": [{"role": "user", "content": "How many legs does a spider have?"}], "scorer": {"type": "contains_any", "answers": ["8", "eight"]}, "max_tokens": 96}
+{"id": "gk-07", "messages": [{"role": "user", "content": "What is the chemical symbol for iron?"}], "scorer": {"type": "contains_any", "answers": ["Fe"]}, "max_tokens": 96}
+{"id": "gk-08", "messages": [{"role": "user", "content": "Who wrote the novel Pride and Prejudice?"}], "scorer": {"type": "contains_any", "answers": ["Jane Austen", "Austen"]}, "max_tokens": 96}
+{"id": "gk-09", "messages": [{"role": "user", "content": "Which gas do plants absorb from the air for photosynthesis?"}], "scorer": {"type": "contains_any", "answers": ["carbon dioxide", "CO2"]}, "max_tokens": 96}
+{"id": "gk-10", "messages": [{"role": "user", "content": "What is the freezing point of water in degrees Fahrenheit?"}], "scorer": {"type": "contains_any", "answers": ["32"]}, "max_tokens": 96}
+{"id": "gk-11", "messages": [{"role": "user", "content": "Which ocean lies between Africa and Australia?"}], "scorer": {"type": "contains_any", "answers": ["Indian"]}, "max_tokens": 96}
+{"id": "gk-12", "messages": [{"role": "user", "content": "How many sides does a hexagon have?"}], "scorer": {"type": "contains_any", "answers": ["6", "six"]}, "max_tokens": 96}

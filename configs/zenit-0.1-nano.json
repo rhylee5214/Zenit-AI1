@@ -1,0 +1,21 @@
+{
+  "run_name": "zenit-0.1-nano",
+  "version": "0.1-nano",
+  "stage": "pretrain",
+  "backend": "numpy",
+  "model": {"preset": "nano"},
+  "tokenizer": "models/tokenizers/zenit-bpe-1k.json",
+  "data_dir": "data/processed/zenit-seed",
+  "mode": "pretrain",
+  "batch_size": 16,
+  "seq_len": 128,
+  "max_steps": 1800,
+  "lr": 0.002,
+  "min_lr": 0.0002,
+  "warmup_steps": 100,
+  "eval_interval": 100,
+  "eval_batches": 8,
+  "log_interval": 10,
+  "ckpt_interval": 250,
+  "notes": "Pipeline proof. Tiny native ZENIT trained from scratch on the CC0 seed corpus, CPU only."
+}

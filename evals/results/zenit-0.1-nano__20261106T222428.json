@@ -1,0 +1,642 @@
+{
+  "model": "zenit-0.1-nano",
+  "created": "2026-11-06T22:24:28+00:00",
+  "suite_hash": "2ca9aa688373",
+  "mode": "local",
+  "code_exec": true,
+  "summary": {
+    "general_knowledge": 0.1667,
+    "math": 0.4667,
+    "coding": 0.0,
+    "reasoning": 0.0,
+    "instruction_following": 0.0,
+    "conversation": 0.0,
+    "hallucination": 0.25,
+    "hallucination_rate": 0.75,
+    "first_token_ms": 4.1,
+    "tokens_per_sec": 533.5
+  },
+  "items": [
+    {
+      "category": "general_knowledge",
+      "id": "gk-01",
+      "passed": false,
+      "detail": "none of ['Stockholm']",
+      "answer": "The capital of Sunpt is Mamatio.",
+      "first_token_s": 0.009444422000342456,
+      "seconds": 0.031
+    },
+    {
+      "category": "general_knowledge",
+      "id": "gk-02",
+      "passed": false,
+      "detail": "none of ['Warsaw']",
+      "answer": "The capital of Portugal is Lisbon.",
+      "first_token_s": 0.003481653999642731,
+      "seconds": 0.022
+    },
+    {
+      "category": "general_knowledge",
+      "id": "gk-03",
+      "passed": false,
+      "detail": "none of ['Seoul']",
+      "answer": "The capital of Spain is Madrid.",
+      "first_token_s": 0.0035766579999290116,
+      "seconds": 0.022
+    },
+    {
+      "category": "general_knowledge",
+      "id": "gk-04",
+      "passed": false,
+      "detail": "none of ['Lima']",
+      "answer": "The capital of Portugal is Lisbon.",
+      "first_token_s": 0.0032317729996975686,
+      "seconds": 0.022
+    },
+    {
+      "category": "general_knowledge",
+      "id": "gk-05",
+      "passed": false,
+      "detail": "none of ['Mercury']",
+      "answer": "MLeonardo da Vinci painted the Mona Lisa.",
+      "first_token_s": 0.003701826999986224,
+      "seconds": 0.042
+    },
+    {
+      "category": "general_knowledge",
+      "id": "gk-06",
+      "passed": false,
+      "detail": "none of ['8', 'eight']",
+      "answer": "Aar and a named block of code that takes inputs, does a task and can return a result.",
+      "first_token_s": 0.0036579429997800617,
+      "seconds": 0.051
+    },
+    {
+      "category": "general_knowledge",
+      "id": "gk-07",
+      "passed": false,
+      "detail": "none of ['Fe']",
+      "answer": "I don't know of an element called Rustyium. It may not exist.",
+      "first_token_s": 0.0036807589999625634,
+      "seconds": 0.03
+    },
+    {
+      "category": "general_knowledge",
+      "id": "gk-08",
+      "passed": false,
+      "detail": "none of ['Jane Austen', 'Austen']",
+      "answer": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit).",
+      "first_token_s": 0.004039698000269709,
+      "seconds": 0.043
+    },
+    {
+      "category": "general_knowledge",
+      "id": "gk-09",
+      "passed": true,
+      "detail": "found 'carbon dioxide'",
+      "answer": "Photosynthesis is how plants use sunlight, water and carbon dioxide to make sugar and release oxygen.",
+      "first_token_s": 0.004751959000259376,
+      "seconds": 0.082
+    },
+    {
+      "category": "general_knowledge",
+      "id": "gk-10",
+      "passed": true,
+      "detail": "found '32'",
+      "answer": "```python\ndef celsius_to_fahrenheit(c):\n    return c * 9 / 5 + 32\n```",
+      "first_token_s": 0.003920349000054557,
+      "seconds": 0.046
+    },
+    {
+      "category": "general_knowledge",
+      "id": "gk-11",
+      "passed": false,
+      "detail": "none of ['Indian']",
+      "answer": "The capital of Australia is Canberra.",
+      "first_token_s": 0.004382887999781815,
+      "seconds": 0.029
+    },
+    {
+      "category": "general_knowledge",
+      "id": "gk-12",
+      "passed": false,
+      "detail": "none of ['6', 'six']",
+      "answer": "AM stands for random access memory.",
+      "first_token_s": 0.0036003979998895375,
+      "seconds": 0.027
+    },
+    {
+      "category": "math",
+      "id": "math-add-10-20",
+      "passed": true,
+      "detail": "last number 30, expected 30",
+      "answer": "10 + 20 = 30.",
+      "first_token_s": 0.0033157969996864267,
+      "seconds": 0.018
+    },
+    {
+      "category": "math",
+      "id": "math-add-12-13",
+      "passed": false,
+      "detail": "last number 24, expected 25",
+      "answer": "12 + 13 = 24.",
+      "first_token_s": 0.0032424149999314977,
+      "seconds": 0.016
+    },
+    {
+      "category": "math",
+      "id": "math-add-13-48",
+      "passed": true,
+      "detail": "last number 61, expected 61",
+      "answer": "13 + 48 = 61.",
+      "first_token_s": 0.003123153000160528,
+      "seconds": 0.017
+    },
+    {
+      "category": "math",
+      "id": "math-add-15-41",
+      "passed": true,
+      "detail": "last number 56, expected 56",
+      "answer": "15 + 41 = 56.",
+      "first_token_s": 0.0031626269997104828,
+      "seconds": 0.016
+    },
+    {
+      "category": "math",
+      "id": "math-add-17-34",
+      "passed": true,
+      "detail": "last number 51, expected 51",
+      "answer": "17 + 34 = 51.",
+      "first_token_s": 0.0031503410000368604,
+      "seconds": 0.016
+    },
+    {
+      "category": "math",
+      "id": "math-add-19-27",
+      "passed": true,
+      "detail": "last number 46, expected 46",
+      "answer": "19 + 27 = 46.",
+      "first_token_s": 0.003039556000203447,
+      "seconds": 0.016
+    },
+    {
+      "category": "math",
+      "id": "math-sub-20-7",
+      "passed": false,
+      "detail": "last number 12, expected 13",
+      "answer": "20 - 7 = 12.",
+      "first_token_s": 0.002975534000142943,
+      "seconds": 0.015
+    },
+    {
+      "category": "math",
+      "id": "math-sub-25-17",
+      "passed": true,
+      "detail": "last number 8, expected 8",
+      "answer": "25 - 17 = 8.",
+      "first_token_s": 0.0030859590001455217,
+      "seconds": 0.015
+    },
+    {
+      "category": "math",
+      "id": "math-sub-30-16",
+      "passed": true,
+      "detail": "last number 14, expected 14",
+      "answer": "30 - 16 = 14.",
+      "first_token_s": 0.0030568229999516916,
+      "seconds": 0.016
+    },
+    {
+      "category": "math",
+      "id": "math-mul-2-4",
+      "passed": false,
+      "detail": "last number 12, expected 8",
+      "answer": "2 \u00d7 4 = 12.",
+      "first_token_s": 0.0029986409999764874,
+      "seconds": 0.014
+    },
+    {
+      "category": "math",
+      "id": "math-mul-3-6",
+      "passed": false,
+      "detail": "last number 12, expected 18",
+      "answer": "3 \u00d7 6 = 12.",
+      "first_token_s": 0.0029090319999340863,
+      "seconds": 0.013
+    },
+    {
+      "category": "math",
+      "id": "math-mul-4-8",
+      "passed": false,
+      "detail": "last number 14, expected 32",
+      "answer": "4 \u00d7 8 = 14.",
+      "first_token_s": 0.0030426929997702246,
+      "seconds": 0.013
+    },
+    {
+      "category": "math",
+      "id": "math-wp-1",
+      "passed": false,
+      "detail": "no number",
+      "answer": "You're welcome. Happy to help.",
+      "first_token_s": 0.004599435999807611,
+      "seconds": 0.028
+    },
+    {
+      "category": "math",
+      "id": "math-wp-2",
+      "passed": false,
+      "detail": "last number 12, expected 9",
+      "answer": "There are 12 months in a year.",
+      "first_token_s": 0.004595805000008113,
+      "seconds": 0.026
+    },
+    {
+      "category": "math",
+      "id": "math-wp-3",
+      "passed": false,
+      "detail": "last number 15, expected 20",
+      "answer": "25 - 8 = 15.",
+      "first_token_s": 0.003317923999929917,
+      "seconds": 0.015
+    },
+    {
+      "category": "coding",
+      "id": "code-cube",
+      "passed": false,
+      "detail": "failed: NameError: name 'cube' is not defined",
+      "answer": "```python\ndef factorial(n):\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result\n```",
+      "first_token_s": 0.003805047000241757,
+      "seconds": 0.072
+    },
+    {
+      "category": "coding",
+      "id": "code-is_odd",
+      "passed": false,
+      "detail": "failed: SyntaxError: invalid syntax",
+      "answer": "Nice to meet you, Theo! How can I help?",
+      "first_token_s": 0.00629088599998795,
+      "seconds": 0.037
+    },
+    {
+      "category": "coding",
+      "id": "code-product",
+      "passed": false,
+      "detail": "failed: NameError: name 'product' is not defined",
+      "answer": "```python\ndef sum_list(numbers):\n    total = 0\n    for n in numbers:\n        total += n\n    return total\n```",
+      "first_token_s": 0.006026947999998811,
+      "seconds": 0.069
+    },
+    {
+      "category": "coding",
+      "id": "code-count_char",
+      "passed": false,
+      "detail": "failed: NameError: name 'count_char' is not defined",
+      "answer": "```python\ndef reverse_string(s):\n    return s[::-1]\n```",
+      "first_token_s": 0.005171967000023869,
+      "seconds": 0.041
+    },
+    {
+      "category": "coding",
+      "id": "code-max_of_three",
+      "passed": false,
+      "detail": "failed: NameError: name 'max_of_three' is not defined",
+      "answer": "```python\ndef fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a\n```",
+      "first_token_s": 0.004541596999843023,
+      "seconds": 0.068
+    },
+    {
+      "category": "coding",
+      "id": "code-reverse_words",
+      "passed": false,
+      "detail": "failed: NameError: name 'gen' is not defined. Did you mean: 'len'?",
+      "answer": "gen",
+      "first_token_s": 0.004932645999815577,
+      "seconds": 0.008
+    },
+    {
+      "category": "coding",
+      "id": "code-sum_of_squares",
+      "passed": false,
+      "detail": "failed: SyntaxError: unmatched ')'",
+      "answer": "1 + 1):\n        if n % i == 0:\n            return False\n    return True\n```",
+      "first_token_s": 0.004869108000093547,
+      "seconds": 0.039
+    },
+    {
+      "category": "coding",
+      "id": "code-unique_count",
+      "passed": false,
+      "detail": "failed: NameError: name 'unique_count' is not defined",
+      "answer": "```python\ndef word_count(text):\n    return len(text.split())\n```",
+      "first_token_s": 0.004948581999997259,
+      "seconds": 0.041
+    },
+    {
+      "category": "reasoning",
+      "id": "rs-01",
+      "passed": false,
+      "detail": "none of ['Cara']",
+      "answer": "Nice to9 = 6.",
+      "first_token_s": 0.00510600899997371,
+      "seconds": 0.015
+    },
+    {
+      "category": "reasoning",
+      "id": "rs-02",
+      "passed": false,
+      "detail": "last number 61, expected 32",
+      "answer": "9 + 50 = 61.",
+      "first_token_s": 0.0036718490000566817,
+      "seconds": 0.016
+    },
+    {
+      "category": "reasoning",
+      "id": "rs-03",
+      "passed": false,
+      "detail": "no number",
+      "answer": "The capital of a convertinents are there?",
+      "first_token_s": 0.004848868999943079,
+      "seconds": 0.027
+    },
+    {
+      "category": "reasoning",
+      "id": "rs-04",
+      "passed": false,
+      "detail": "none of ['Thursday']",
+      "answer": "3 \u00d7 3 = 20.",
+      "first_token_s": 0.004051433000313409,
+      "seconds": 0.015
+    },
+    {
+      "category": "reasoning",
+      "id": "rs-05",
+      "passed": false,
+      "detail": "none of ['same', 'equal', 'neither', 'both weigh']",
+      "answer": "There are 60 minutes in an hour.",
+      "first_token_s": 0.004835247999835701,
+      "seconds": 0.026
+    },
+    {
+      "category": "reasoning",
+      "id": "rs-06",
+      "passed": false,
+      "detail": "no number",
+      "answer": "Go. I learning! What way to build programs do?",
+      "first_token_s": 0.009007816999655915,
+      "seconds": 0.042
+    },
+    {
+      "category": "reasoning",
+      "id": "rs-07",
+      "passed": false,
+      "detail": "pattern (^|[^A-Za-z])I([^A-Za-z]|$)",
+      "answer": "What write short pieces of code. This build is small, so check important answers.",
+      "first_token_s": 0.0038010749999557447,
+      "seconds": 0.051
+    },
+    {
+      "category": "reasoning",
+      "id": "rs-08",
+      "passed": false,
+      "detail": "no number",
+      "answer": "William Shakespeare wrote Romeo and Juliet.",
+      "first_token_s": 0.005472329999975045,
+      "seconds": 0.045
+    },
+    {
+      "category": "instruction_following",
+      "id": "if-01",
+      "passed": false,
+      "detail": "failed exact='yes'",
+      "answer": "O. I gperen",
+      "first_token_s": 0.003424306999932014,
+      "seconds": 0.012
+    },
+    {
+      "category": "instruction_following",
+      "id": "if-02",
+      "passed": false,
+      "detail": "failed contains_cs='GALAXY'",
+      "answer": "LANO",
+      "first_token_s": 0.003413603999888437,
+      "seconds": 0.009
+    },
+    {
+      "category": "instruction_following",
+      "id": "if-03",
+      "passed": false,
+      "detail": "failed bullets=3",
+      "answer": "At seven(n):\n    return n % 2 == 0\n```",
+      "first_token_s": 0.004208681999898545,
+      "seconds": 0.026
+    },
+    {
+      "category": "instruction_following",
+      "id": "if-04",
+      "passed": false,
+      "detail": "failed lowercase=True",
+      "answer": "The capital of France is Paris.",
+      "first_token_s": 0.003847639000014169,
+      "seconds": 0.019
+    },
+    {
+      "category": "instruction_following",
+      "id": "if-05",
+      "passed": false,
+      "detail": "failed min_words=3",
+      "answer": "- apple\n- banana",
+      "first_token_s": 0.00393448900013027,
+      "seconds": 0.019
+    },
+    {
+      "category": "instruction_following",
+      "id": "if-06",
+      "passed": false,
+      "detail": "failed json_keys=['name', 'age']",
+      "answer": "Nice to0 + 30 = 50.",
+      "first_token_s": 0.004887514000074589,
+      "seconds": 0.02
+    },
+    {
+      "category": "instruction_following",
+      "id": "if-07",
+      "passed": false,
+      "detail": "failed regex='^\\\\s*3,\\\\s*4,\\\\s*5,\\\\s*6,\\\\s*7\\\\.?\\\\s*$'",
+      "answer": "Guido van Rossum created the Python programming language.",
+      "first_token_s": 0.003623857999627944,
+      "seconds": 0.031
+    },
+    {
+      "category": "instruction_following",
+      "id": "if-08",
+      "passed": false,
+      "detail": "failed starts_with='Sure'",
+      "answer": "2 + 2 = 2.",
+      "first_token_s": 0.0038944779998928425,
+      "seconds": 0.013
+    },
+    {
+      "category": "instruction_following",
+      "id": "if-09",
+      "passed": false,
+      "detail": "failed not_contains_ci='e'",
+      "answer": "Pi is the about 3 3, 4159.",
+      "first_token_s": 0.004193996000140032,
+      "seconds": 0.041
+    },
+    {
+      "category": "instruction_following",
+      "id": "if-10",
+      "passed": false,
+      "detail": "failed contains='the quick brown fox'",
+      "answer": "Water times 9 = 12.",
+      "first_token_s": 0.004878172000189807,
+      "seconds": 0.022
+    },
+    {
+      "category": "conversation",
+      "id": "cv-name-mateo",
+      "passed": false,
+      "detail": "none of ['Mateo']",
+      "answer": "Your name is Maya.",
+      "first_token_s": 0.006068609000067227,
+      "seconds": 0.021
+    },
+    {
+      "category": "conversation",
+      "id": "cv-name-ingrid",
+      "passed": false,
+      "detail": "none of ['Ingrid']",
+      "answer": "Your name is Mia.",
+      "first_token_s": 0.006400790000043344,
+      "seconds": 0.019
+    },
+    {
+      "category": "conversation",
+      "id": "cv-name-kofi",
+      "passed": false,
+      "detail": "none of ['Kofi']",
+      "answer": "Your name is Leo.",
+      "first_token_s": 0.006343876999835629,
+      "seconds": 0.022
+    },
+    {
+      "category": "conversation",
+      "id": "cv-name-yuki",
+      "passed": false,
+      "detail": "none of ['Yuki']",
+      "answer": "Your name is Maya.",
+      "first_token_s": 0.0062086990001262166,
+      "seconds": 0.02
+    },
+    {
+      "category": "conversation",
+      "id": "cv-name-elena",
+      "passed": false,
+      "detail": "none of ['Elena']",
+      "answer": "Your name is Ella.",
+      "first_token_s": 0.004915157000141335,
+      "seconds": 0.018
+    },
+    {
+      "category": "conversation",
+      "id": "cv-dog",
+      "passed": false,
+      "detail": "none of ['Rufus']",
+      "answer": "At sea level, water boils at 100 degrees Celsius (212 degrees Fahrenheit).",
+      "first_token_s": 0.005083258000013302,
+      "seconds": 0.043
+    },
+    {
+      "category": "conversation",
+      "id": "cv-number",
+      "passed": false,
+      "detail": "no number",
+      "answer": "There are even continents.",
+      "first_token_s": 0.004971292999925936,
+      "seconds": 0.021
+    },
+    {
+      "category": "conversation",
+      "id": "cv-units",
+      "passed": false,
+      "detail": "last number 30, expected 200",
+      "answer": "29 - 2 = 30.",
+      "first_token_s": 0.005457026999920345,
+      "seconds": 0.018
+    },
+    {
+      "category": "hallucination",
+      "id": "hl-01",
+      "passed": true,
+      "detail": "declined or corrected (\"i don't know\")",
+      "answer": "I don't know. I have no reliable information about a city called Tycor.",
+      "first_token_s": 0.0033652829997663503,
+      "seconds": 0.027
+    },
+    {
+      "category": "hallucination",
+      "id": "hl-02",
+      "passed": false,
+      "detail": "answered as if the entity or premise were real",
+      "answer": "I'm ZENIT, an AI assistant. This build is a small experimental model, so my knowledge is limited.",
+      "first_token_s": 0.0040898650004237425,
+      "seconds": 0.038
+    },
+    {
+      "category": "hallucination",
+      "id": "hl-03",
+      "passed": false,
+      "detail": "answered as if the entity or premise were real",
+      "answer": "- dog\n- cat",
+      "first_token_s": 0.004769704999944224,
+      "seconds": 0.016
+    },
+    {
+      "category": "hallucination",
+      "id": "hl-04",
+      "passed": true,
+      "detail": "declined or corrected (\"i don't know\")",
+      "answer": "I don't know of an element called Tycorium. It may not exist.",
+      "first_token_s": 0.0036944220000805217,
+      "seconds": 0.028
+    },
+    {
+      "category": "hallucination",
+      "id": "hl-05",
+      "passed": false,
+      "detail": "answered as if the entity or premise were real",
+      "answer": "- Mercury\n",
+      "first_token_s": 0.004543930000181717,
+      "seconds": 0.016
+    },
+    {
+      "category": "hallucination",
+      "id": "hl-06",
+      "passed": false,
+      "detail": "answered as if the entity or premise were real",
+      "answer": "Photosynthesis is how plants use sunlight, water and carbon dioxide to make sugar and release oxygen.",
+      "first_token_s": 0.005185706999782269,
+      "seconds": 0.13
+    },
+    {
+      "category": "hallucination",
+      "id": "hl-07",
+      "passed": false,
+      "detail": "answered as if the entity or premise were real",
+      "answer": "Gachine learning! Can b wr?",
+      "first_token_s": 0.0046810280000499915,
+      "seconds": 0.028
+    },
+    {
+      "category": "hallucination",
+      "id": "hl-08",
+      "passed": false,
+      "detail": "answered as if the entity or premise were real",
+      "answer": "Gravity is the force that pulls objects with mass toward each other. It keeps the planets in orbit around the Sun.",
+      "first_token_s": 0.005148771000222041,
+      "seconds": 0.087
+    }
+  ]
+}

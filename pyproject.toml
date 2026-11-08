@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zenit"
+version = "0.1.0"
+description = "ZENIT: an independent language model platform with its own weights, training pipeline, inference engine, API and web app."
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "starlette>=0.37",
+  "uvicorn>=0.29",
+  "pydantic>=2.6",
+  "pypdf>=4.0",
+  "python-docx>=1.1",
+  "psutil>=5.9",
+  "pyjwt[crypto]>=2.8",   # Sign in with Google: ID token verification
+]
+
+[project.optional-dependencies]
+# Native ZENIT training and inference on GPU
+torch = ["torch>=2.3", "safetensors>=0.4"]
+# Fine-tuning open-weight foundation models (ZENIT 2.0+)
+finetune = [
+  "torch>=2.3",
+  "transformers>=4.51",
+  "datasets>=2.19",
+  "peft>=0.11",
+  "accelerate>=0.30",
+  "bitsandbytes>=0.43",
+  "safetensors>=0.4",
+]
+# Run open-weight models locally (the default Qwen3-4B-Instruct-2507, 4-bit)
+local = ["torch>=2.3", "transformers>=4.51", "accelerate>=0.30", "bitsandbytes>=0.43", "safetensors>=0.4"]
+# Roblox Studio agent mode (MCP client)
+roblox = ["mcp>=1.10"]
+# Better embeddings for memory and document search
+embeddings = ["sentence-transformers>=3.0"]
+dev = ["pytest>=8", "matplotlib>=3.8", "requests>=2.31"]
+
+[tool.setuptools.packages.find]
+include = ["zenit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

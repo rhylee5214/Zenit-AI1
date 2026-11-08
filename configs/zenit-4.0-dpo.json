@@ -1,0 +1,22 @@
+{
+  "run_name": "zenit-4.0-dpo",
+  "version": "4.0",
+  "stage": "dpo",
+  "base_model": "Qwen/Qwen3-4B-Base",
+  "base_license": "Apache-2.0",
+  "init_adapter": "models/zenit-2.0-sft/adapter",
+  "pref_data": "data/pref/zenit_honesty.jsonl",
+  "pref_manifest": "data/manifests/zenit-4.0-pref.json",
+  "max_examples": 5000,
+  "max_seq_len": 1536,
+  "beta": 0.1,
+  "lr": 0.00002,
+  "epochs": 1,
+  "batch_size": 1,
+  "grad_accum": 8,
+  "warmup_ratio": 0.05,
+  "logging_steps": 5,
+  "load_in_4bit": "auto",
+  "gradient_checkpointing": true,
+  "chat_template_kwargs": {"enable_thinking": false}
+}

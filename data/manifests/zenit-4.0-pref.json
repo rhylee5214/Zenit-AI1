@@ -1,0 +1,9 @@
+{
+  "name": "zenit-4.0-pref",
+  "notes": "Preference pairs for DPO. Verify the license on the dataset card, then set permission to true.",
+  "sources": [
+    {"name": "ultrafeedback-binarized", "path": "", "kind": "pref_jsonl", "hf_dataset": "HuggingFaceH4/ultrafeedback_binarized",
+     "hf_split": "train_prefs", "license": "MIT (verify on the dataset card)",
+     "origin": "Hugging Face H4", "permission": false}
+  ]
+}

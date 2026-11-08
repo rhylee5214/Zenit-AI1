@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZENIT training</title>
+<link rel="icon" href="/static/zenit-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/app.css">
+<link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body class="dash">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="zg" x1="0" x2="1"><stop offset="0" stop-color="var(--blue)"/><stop offset="1" stop-color="var(--violet)"/></linearGradient></defs></svg>
+<header class="dash-top">
+  <a class="brand-link" href="/" aria-label="Back to chat">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 24 A12 12 0 0 1 28 24" fill="none" stroke="url(#zg)" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="12" r="2.6" fill="url(#zg)"/></svg>
+    <span class="wordmark">ZENIT</span>
+  </a>
+  <h1>Training</h1>
+  <div class="dash-actions">
+    <a class="btn" href="/">Back to chat</a>
+    <button class="icon-btn" id="themeToggle" aria-label="Switch theme" title="Switch theme"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+
+<div class="dash-grid">
+  <aside class="runs" aria-label="Training runs">
+    <div class="runs-head"><h2>Runs</h2><button class="btn small" id="newRunBtn">New run</button></div>
+    <div id="runList"></div>
+  </aside>
+
+  <main class="run-main">
+    <section id="runDetail" class="panel"><p class="hint">Select a run.</p></section>
+
+    <section class="panel" id="newRun" hidden>
+      <h2>New training run</h2>
+      <p class="hint">ZENIT estimates compute, memory and disk first. Runs over 2 hours, or that do not fit your GPU or disk, need a second confirmation.</p>
+      <form id="runForm" class="form-grid">
+        <label class="field">Run name<input name="run_name" value="zenit-1.0-small" required pattern="[A-Za-z0-9._-]+"></label>
+        <label class="field">Version<input name="version" value="1.0-small" required></label>
+        <label class="field">Model size<select name="preset"><option value="nano">nano (about 0.9M)</option><option value="small" selected>small (about 32M)</option><option value="base">base (about 100M)</option><option value="medium">medium (about 300M)</option></select></label>
+        <label class="field">Backend<select name="backend"><option value="torch" selected>PyTorch (GPU)</option><option value="numpy">NumPy (CPU)</option></select></label>
+        <label class="field">Dataset folder<input name="data_dir" value="data/processed/zenit-seed"></label>
+        <label class="field">Tokenizer<input name="tokenizer" value="models/tokenizers/zenit-bpe-1k.json"></label>
+        <label class="field">Training mode<select name="mode"><option value="pretrain">Pretrain (all tokens)</option><option value="sft">SFT (assistant tokens only)</option></select></label>
+        <label class="field">Start from model folder (optional)<input name="init_from" placeholder="models/zenit-0.1-nano"></label>
+        <label class="field">Steps<input name="max_steps" type="number" value="5000" min="1"></label>
+        <label class="field">Batch size<input name="batch_size" type="number" value="32" min="1"></label>
+        <label class="field">Sequence length<input name="seq_len" type="number" value="512" min="8"></label>
+        <label class="field">Gradient accumulation<input name="grad_accum" type="number" value="1" min="1"></label>
+        <label class="field">Learning rate<input name="lr" type="number" value="0.0006" step="any" min="0"></label>
+        <label class="field">Warmup steps<input name="warmup_steps" type="number" value="200" min="0"></label>
+        <label class="field">Evaluate every<input name="eval_interval" type="number" value="250" min="1"></label>
+        <label class="field">Precision<select name="precision"><option value="bf16">bf16</option><option value="fp16">fp16</option><option value="fp32">fp32</option></select></label>
+        <div class="form-actions">
+          <button type="button" class="btn" id="estimateBtn">Estimate resources</button>
+          <button type="submit" class="btn primary" id="startBtn">Start training</button>
+        </div>
+      </form>
+      <div id="estimateOut"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Models</h2>
+      <div id="registry"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Roadmap</h2>
+      <p class="hint">Development milestones. Each one counts as reached only once a trained checkpoint passes its evaluations.</p>
+      <ol class="roadmap" id="roadmap"></ol>
+    </section>
+
+    <section class="panel">
+      <h2>Evaluations</h2>
+      <div id="evals"></div>
+    </section>
+  </main>
+</div>
+<div class="toasts" id="toasts" role="status"></div>
+<script src="/static/dashboard.js"></script>
+</body>
+</html>

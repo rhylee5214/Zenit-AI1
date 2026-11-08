@@ -1,0 +1,90 @@
+{
+  "name": "zenit-seed",
+  "sources": [
+    {
+      "name": "seed-identity",
+      "path": "data/raw/zenit_seed/identity.jsonl",
+      "kind": "chat_jsonl",
+      "license": "CC0-1.0",
+      "origin": "original, written for the ZENIT project",
+      "permission": true,
+      "weight": 3.0,
+      "filters": {}
+    },
+    {
+      "name": "seed-math",
+      "path": "data/raw/zenit_seed/math.jsonl",
+      "kind": "chat_jsonl",
+      "license": "CC0-1.0",
+      "origin": "original, written for the ZENIT project",
+      "permission": true,
+      "weight": 1.0,
+      "filters": {
+        "min_alpha_ratio": 0.0
+      }
+    },
+    {
+      "name": "seed-facts",
+      "path": "data/raw/zenit_seed/facts.jsonl",
+      "kind": "chat_jsonl",
+      "license": "CC0-1.0",
+      "origin": "original, written for the ZENIT project",
+      "permission": true,
+      "weight": 3.0,
+      "filters": {}
+    },
+    {
+      "name": "seed-honesty",
+      "path": "data/raw/zenit_seed/honesty.jsonl",
+      "kind": "chat_jsonl",
+      "license": "CC0-1.0",
+      "origin": "original, written for the ZENIT project",
+      "permission": true,
+      "weight": 3.0,
+      "filters": {}
+    },
+    {
+      "name": "seed-instructions",
+      "path": "data/raw/zenit_seed/instructions.jsonl",
+      "kind": "chat_jsonl",
+      "license": "CC0-1.0",
+      "origin": "original, written for the ZENIT project",
+      "permission": true,
+      "weight": 2.0,
+      "filters": {
+        "min_alpha_ratio": 0.0
+      }
+    },
+    {
+      "name": "seed-code",
+      "path": "data/raw/zenit_seed/code.jsonl",
+      "kind": "chat_jsonl",
+      "license": "CC0-1.0",
+      "origin": "original, written for the ZENIT project",
+      "permission": true,
+      "weight": 3.0,
+      "filters": {
+        "min_alpha_ratio": 0.0
+      }
+    },
+    {
+      "name": "seed-conversation",
+      "path": "data/raw/zenit_seed/conversation.jsonl",
+      "kind": "chat_jsonl",
+      "license": "CC0-1.0",
+      "origin": "original, written for the ZENIT project",
+      "permission": true,
+      "weight": 3.0,
+      "filters": {}
+    },
+    {
+      "name": "seed-prose",
+      "path": "data/raw/zenit_seed/prose.txt",
+      "kind": "text",
+      "license": "CC0-1.0",
+      "origin": "original, written for the ZENIT project",
+      "permission": true,
+      "weight": 1.0
+    }
+  ]
+}

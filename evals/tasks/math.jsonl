@@ -1,0 +1,15 @@
+{"id": "math-add-10-20", "messages": [{"role": "user", "content": "What is 10 + 20?"}], "scorer": {"type": "number", "value": 30}, "max_tokens": 32}
+{"id": "math-add-12-13", "messages": [{"role": "user", "content": "What is 12 + 13?"}], "scorer": {"type": "number", "value": 25}, "max_tokens": 32}
+{"id": "math-add-13-48", "messages": [{"role": "user", "content": "What is 13 + 48?"}], "scorer": {"type": "number", "value": 61}, "max_tokens": 32}
+{"id": "math-add-15-41", "messages": [{"role": "user", "content": "What is 15 + 41?"}], "scorer": {"type": "number", "value": 56}, "max_tokens": 32}
+{"id": "math-add-17-34", "messages": [{"role": "user", "content": "What is 17 + 34?"}], "scorer": {"type": "number", "value": 51}, "max_tokens": 32}
+{"id": "math-add-19-27", "messages": [{"role": "user", "content": "What is 19 + 27?"}], "scorer": {"type": "number", "value": 46}, "max_tokens": 32}
+{"id": "math-sub-20-7", "messages": [{"role": "user", "content": "What is 20 - 7?"}], "scorer": {"type": "number", "value": 13}, "max_tokens": 32}
+{"id": "math-sub-25-17", "messages": [{"role": "user", "content": "What is 25 - 17?"}], "scorer": {"type": "number", "value": 8}, "max_tokens": 32}
+{"id": "math-sub-30-16", "messages": [{"role": "user", "content": "What is 30 - 16?"}], "scorer": {"type": "number", "value": 14}, "max_tokens": 32}
+{"id": "math-mul-2-4", "messages": [{"role": "user", "content": "What is 2 times 4?"}], "scorer": {"type": "number", "value": 8}, "max_tokens": 32}
+{"id": "math-mul-3-6", "messages": [{"role": "user", "content": "What is 3 times 6?"}], "scorer": {"type": "number", "value": 18}, "max_tokens": 32}
+{"id": "math-mul-4-8", "messages": [{"role": "user", "content": "What is 4 times 8?"}], "scorer": {"type": "number", "value": 32}, "max_tokens": 32}
+{"id": "math-wp-1", "messages": [{"role": "user", "content": "Pens cost 3 dollars each. How much do 7 pens cost in dollars?"}], "scorer": {"type": "number", "value": 21}, "max_tokens": 128}
+{"id": "math-wp-2", "messages": [{"role": "user", "content": "Tom has 15 apples and gives away 6. How many apples does he have left?"}], "scorer": {"type": "number", "value": 9}, "max_tokens": 128}
+{"id": "math-wp-3", "messages": [{"role": "user", "content": "What is 25% of 80?"}], "scorer": {"type": "number", "value": 20}, "max_tokens": 96}

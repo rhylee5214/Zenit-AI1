@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/zenit.db*
+data/processed/
+runs/*/checkpoints/step_*
+runs/_configs/
+hardware_report.json
+models/*/adapter/
+models/*-merged/
+*.gguf
+.env
+models/qwen3-*/
+
+# Local generated files
+*.exe
+*.egg-info/
+data/raw/
+data/pref/
+data/sft/
+runs/
+
+# Private authentication settings
+configs/auth.json
+
+# Windows llama.cpp binaries
+tools/llama.cpp/*.dll

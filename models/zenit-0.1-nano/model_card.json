@@ -1,0 +1,74 @@
+{
+  "id": "zenit-0.1-nano",
+  "name": "ZENIT",
+  "version": "0.1-nano",
+  "stage": "pretrain",
+  "architecture": "zenit-decoder (RMSNorm, RoPE, GQA, SwiGLU, tied embeddings)",
+  "weights_format": "zenit-npz",
+  "trained_from_scratch": true,
+  "init_from": null,
+  "run_id": "zenit-0.1-nano-20261106-220825",
+  "dataset": {
+    "dir": "data/processed/zenit-seed",
+    "manifest_fingerprint": "89b302d5555b3711",
+    "tokens": {
+      "train": 225112,
+      "val": 11747
+    },
+    "sources": {
+      "seed-identity": {
+        "seen": 64,
+        "kept": 47,
+        "license": "CC0-1.0",
+        "origin": "original, written for the ZENIT project"
+      },
+      "seed-math": {
+        "seen": 3701,
+        "kept": 3693,
+        "license": "CC0-1.0",
+        "origin": "original, written for the ZENIT project"
+      },
+      "seed-facts": {
+        "seen": 118,
+        "kept": 118,
+        "license": "CC0-1.0",
+        "origin": "original, written for the ZENIT project"
+      },
+      "seed-honesty": {
+        "seen": 620,
+        "kept": 620,
+        "license": "CC0-1.0",
+        "origin": "original, written for the ZENIT project"
+      },
+      "seed-instructions": {
+        "seen": 101,
+        "kept": 101,
+        "license": "CC0-1.0",
+        "origin": "original, written for the ZENIT project"
+      },
+      "seed-code": {
+        "seen": 72,
+        "kept": 72,
+        "license": "CC0-1.0",
+        "origin": "original, written for the ZENIT project"
+      },
+      "seed-conversation": {
+        "seen": 88,
+        "kept": 74,
+        "license": "CC0-1.0",
+        "origin": "original, written for the ZENIT project"
+      },
+      "seed-prose": {
+        "seen": 30,
+        "kept": 10,
+        "license": "CC0-1.0",
+        "origin": "original, written for the ZENIT project"
+      }
+    }
+  },
+  "parameters": 857216,
+  "steps": 1800,
+  "final_train_loss": 0.29359,
+  "best_val_loss": 0.38516,
+  "exported_checkpoint": "best"
+}

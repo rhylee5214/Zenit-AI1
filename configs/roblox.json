@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "command": "cmd.exe",
+  "args": ["/c", "cd /d %LOCALAPPDATA%\\Roblox && .\\mcp.bat"],
+  "studio_id": null,
+  "max_steps": 8,
+  "tool_timeout_s": 120,
+  "connect_timeout_s": 30,
+  "generation": {"temperature": 0.3, "top_p": 0.8, "top_k": 20, "repetition_penalty": 1.0}
+}

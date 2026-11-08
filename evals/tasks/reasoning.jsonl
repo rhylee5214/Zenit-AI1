@@ -1,0 +1,8 @@
+{"id": "rs-01", "messages": [{"role": "user", "content": "Anna is taller than Ben. Ben is taller than Cara. Who is the shortest?"}], "scorer": {"type": "contains_any", "answers": ["Cara"]}, "max_tokens": 96}
+{"id": "rs-02", "messages": [{"role": "user", "content": "What number comes next: 2, 4, 8, 16, ?"}], "scorer": {"type": "number", "value": 32}, "max_tokens": 96}
+{"id": "rs-03", "messages": [{"role": "user", "content": "A farmer has 17 sheep. All but 9 run away. How many sheep are left?"}], "scorer": {"type": "number", "value": 9}, "max_tokens": 128}
+{"id": "rs-04", "messages": [{"role": "user", "content": "If today is Monday, what day will it be in 3 days?"}], "scorer": {"type": "contains_any", "answers": ["Thursday"]}, "max_tokens": 96}
+{"id": "rs-05", "messages": [{"role": "user", "content": "Which weighs more: a kilogram of feathers or a kilogram of iron?"}], "scorer": {"type": "contains_any", "answers": ["same", "equal", "neither", "both weigh"]}, "max_tokens": 96}
+{"id": "rs-06", "messages": [{"role": "user", "content": "There are 5 birds on a wire. 2 fly away. How many birds remain on the wire?"}], "scorer": {"type": "number", "value": 3}, "max_tokens": 96}
+{"id": "rs-07", "messages": [{"role": "user", "content": "What letter comes next: A, C, E, G, ?"}], "scorer": {"type": "regex", "pattern": "(^|[^A-Za-z])I([^A-Za-z]|$)"}, "max_tokens": 96}
+{"id": "rs-08", "messages": [{"role": "user", "content": "If 5 machines make 5 widgets in 5 minutes, how many minutes do 100 machines need to make 100 widgets?"}], "scorer": {"type": "number", "value": 5}, "max_tokens": 160}

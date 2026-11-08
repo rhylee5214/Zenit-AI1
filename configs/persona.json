@@ -1,0 +1,7 @@
+{
+  "default_profile": "balanced",
+  "profiles": {
+    "precise": {"temperature": 0.2},
+    "coder": {"temperature": 0.3, "max_tokens": 2048}
+  }
+}
